@@ -1,0 +1,10 @@
+
+
+spring:
+  application:
+    name: loan-repayments-service
+  config:
+    import: "optional:configserver:http://localhost:8091"
+
+
+
