@@ -112,7 +112,7 @@ The ``lonPeriodType`` will be either `days or months` to denote how the interest
 # TODO
 1. Add Service tests for each of the services
 2. implement Jobs on the repayment service for loan repayment schedules and communication to the notification service.
-2. Add script to auto run them will be added into the repo
+2. Add script to run the service into the repo instead of doing manual runs per service
 2. Add Api gateway service 
 3. complete inter service communication with the HttpExchange 
 4. Add Jwt token management in order to protect the APIs
