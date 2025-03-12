@@ -92,14 +92,27 @@ To create a loan product we will need to call this API end point for testing pur
 ``{
     "productName":"daily-flexible",
     "interestType":"Flexible",
-    "interestRate":"221807962",
-    "lateFeeRate":"254721803652",
-    "lateFeeRateCalcType":"Percentage",
+    "interestRate":"2",
+    "lateFeeRate":"300",
+    "lateFeeRateCalcType":"Lump",
     "interestCalcType":"Percentage",
     "lateFeeApplicationGracePeriod":3,
     "loanPeriod":"30",
     "lonPeriodType":"days"
 }``
+or 
+``{
+    "productName":"monthly-flexible",
+    "interestType":"Fixed",
+    "interestRate":"2",
+    "lateFeeRate":"3000",
+    "lateFeeRateCalcType":"Lump",
+    "interestCalcType":"Percentage",
+    "lateFeeApplicationGracePeriod":3,
+    "loanPeriod":"30",
+    "lonPeriodType":"days"
+}``
+The json objects are just examples the configuration would depend on the desired product 
 
 The `lateFeeRateCalcType` and `interestCalcType` can take either Percentage or Lump for lump what it means is that the 
 calculation will be for a lump-sum amount and not a percentage of the principal amount.

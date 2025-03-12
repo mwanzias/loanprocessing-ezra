@@ -26,7 +26,7 @@ public class LoanProductServiceImpl implements LoanProductService {
 
     @Override
     public LoanProduct getAllLoanProductById(Long id) {
-        return loanProductRepository.findById(id).get();
+        return loanProductRepository.findById(id).orElse(null);
     }
 
 }

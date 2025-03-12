@@ -1,9 +1,6 @@
 package com.mwanzias.lending.loanproduct.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +10,7 @@ public class LoanProduct {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "ProductId")
     private long productId;
     private String productName;
     private InterestType interestType ; //fixed or flexible calculations like daily rate monthly rate
