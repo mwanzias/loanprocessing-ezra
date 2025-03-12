@@ -11,7 +11,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/loanmnagement
     username: postgres
-    password: postgres!
+    password: PenangTrang!
   jpa:
     hibernate:
       ddl-auto: create-drop
