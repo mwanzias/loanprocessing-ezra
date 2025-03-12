@@ -7,6 +7,7 @@ order to notify customers of any repayments that are due,
 4. **Notifications service** - this sends out any notifications to the customers or even internally for any of the events that 
 are deemed important and configured for sending out
 
+
 ## Support Services
 
 The following are support services that would be important in the scalable architecture 
@@ -14,6 +15,7 @@ The following are support services that would be important in the scalable archi
 what is used by all other micro-services in order to be able to locate an instance of any of the service tha they would want to get either data or communications related to loan processing 
 
 2. **Configuration server** : This houses all configuration for the services participating in the loan processing
+each of the micro-service has an **application.yaml** configuration file located on the `src\resource` directory with the basic location of the configuration server and the name of the service. 
 
 
 ## Requirements
@@ -53,7 +55,17 @@ Each of the service requires to be ran manually in the following order
 7. For purposes of the demo everything is configured to run on local host
 
 ## port configuration 
+The following are things to note, 
 
+1. Ports can be changed for each of the services either on the local application.yaml for the configuration server and the discovery server, while for the other services this can be changed on the configuration server service files.
+2. In the event any port changes happen on the service configuration on the configuration server it will then need to be updated on each of the individual application.yaml file for each service in order to be able to locate the configuration server
+2. Changing the server on which the discovery service is running on will necesiate updating the configuration of the individual services yaml file
+in the configuration server ``**src\resources\config\{servicename}.yaml**``  to update  the port 8081 below to the new discovery server port
+``  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka/ ``
+
+in order for the service to be able to locate the discover server.
 
 ## Communicating to API
 The following are the APIS that have so far been completed 
