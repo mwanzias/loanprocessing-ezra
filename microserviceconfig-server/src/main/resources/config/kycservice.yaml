@@ -1,9 +1,27 @@
 server:
   port: 8082
 
+
 eureka:
   instance:
     hostname: localhost
   client:
     service-url:
       defaultZone: http://localhost:8081/eureka/
+spring:
+  sql:
+    init:
+      mode: never
+  datasource:
+    url: jdbc:postgresql://localhost:5432/customerkyc
+    username: postgres
+    password: PenangTrang!
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    generate-dl: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true

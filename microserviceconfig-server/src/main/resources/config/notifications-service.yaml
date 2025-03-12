@@ -7,3 +7,15 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8081/eureka/
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/loannotifications
+    username: postgres
+    password: postgres!
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
