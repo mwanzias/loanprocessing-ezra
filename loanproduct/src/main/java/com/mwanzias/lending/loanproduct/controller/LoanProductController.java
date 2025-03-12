@@ -13,6 +13,7 @@ import java.util.List;
 @RestController
 public class LoanProductController {
 
+    // adding observeability for the application in order to be able to troubleshoot
     private static final Logger logger = LoggerFactory.getLogger(LoanProductController.class);
 
    @PostMapping("/loanproducts")

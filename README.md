@@ -90,7 +90,7 @@ This should currently create an entry of the KYC information with the loan limit
 4. loan management not fully completed but in the process of implementing the http exchange to communicate to the loan product service in order to be able to issue loans
 
 # TODO
-1. Add Service tests for each of the tests
+1. Add Service tests for each of the services
 2. implement Jobs on the repayment service for loan repayment schedules and communication to the notification service.
 2. Add script to auto run them will be added into the repo
 2. Add Api gateway service 

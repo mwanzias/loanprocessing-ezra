@@ -1,4 +1,7 @@
 package com.mwanzias.lending.loanproduct.service;
 
-public class LoanProductService {
+import com.mwanzias.lending.loanproduct.entity.LoanProduct;
+
+public interface LoanProductService {
+    LoanProduct saveLoanProduct(LoanProduct loanProduct);
 }
