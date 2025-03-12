@@ -15,6 +15,7 @@ import java.util.Date;
 public class LoanData {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO) // This would be changed in the future to have it with some specific structure, have a service function that generated IDs
+    @Column(name = "loanId")
     private long loanId;
     @NotBlank(message = "The loan cannot be blank")
     @Min(value = 50, message="The loan cannot be less than 50")

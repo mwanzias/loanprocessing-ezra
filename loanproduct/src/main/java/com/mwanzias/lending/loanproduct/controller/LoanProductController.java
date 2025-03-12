@@ -31,7 +31,8 @@ public class LoanProductController {
     }
 
     @GetMapping("/loanproducts/{id}")
-    public LoanProduct findById(@PathVariable  Long id) {
+    public LoanProduct fetchLoanProductByProductID(@PathVariable("id")   Long id) {
+        logger.info("Fetching loan product by id: " + id);
         return loanProductService.getAllLoanProductById(id);
     }
 
