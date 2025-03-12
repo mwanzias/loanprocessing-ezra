@@ -66,7 +66,7 @@ send a post request to ```http://localhost:8082/kycdata``` with a json body of t
 ``{
     "customerName":"Jonh musee",
     "customerEmail":"jester@hotmail.com",
-    "customerNationalId":"227962",
+    "customerNationalId":"22709962",
     "customerPhone":"25472036523",
     "loanLimit":"23200"
 }``
