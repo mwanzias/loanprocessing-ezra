@@ -10,6 +10,9 @@ import org.springframework.web.service.annotation.HttpExchange;
 public interface KycDataClient {
 
     @GetMapping("kycinformation/kycdata/phonenumber/{phonenumber}")
-    public KycData findAllByPhoneNumber(@PathVariable("phonenumber") String customerPhone);
+    KycData findAllByPhoneNumber(@PathVariable("phonenumber") String customerPhone);
+
+    @GetMapping("kycinformation/kycdata/nationalid/{nationalid}")
+    KycData findAllByCustomerNationalId(@PathVariable("nationalid") String nationalId);
 
 }

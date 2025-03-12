@@ -86,6 +86,26 @@ send a post request to ```http://localhost:8082/kycdata``` with a json body of t
 This should currently create an entry of the KYC information with the loan limit for the customer, however with the discovery service the interface will change to enable scalability.
 
 2. creating a loan product
+To create a loan product we will need to call this API end point for testing purpoes.
+```http://localhost:8084/loanproducts``` with the following data to post the value may change as desired:
+
+``{
+    "productName":"daily-flexible",
+    "interestType":"Flexible",
+    "interestRate":"221807962",
+    "lateFeeRate":"254721803652",
+    "lateFeeRateCalcType":"Percentage",
+    "interestCalcType":"Percentage",
+    "lateFeeApplicationGracePeriod":3,
+    "loanPeriod":"30",
+    "lonPeriodType":"days"
+}``
+
+The `lateFeeRateCalcType` and `interestCalcType` can take either Percentage or Lump for lump what it means is that the 
+calculation will be for a lump-sum amount and not a percentage of the principal amount.
+
+The ``lonPeriodType`` will be either `days or months` to denote how the interest will be applied, daily or monthly so that the Jobs that are to run and apply the interest on loans they can easily make that determination
+
 
 4. loan management not fully completed but in the process of implementing the http exchange to communicate to the loan product service in order to be able to issue loans
 

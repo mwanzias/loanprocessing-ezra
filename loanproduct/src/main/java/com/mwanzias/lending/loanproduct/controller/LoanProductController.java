@@ -1,7 +1,7 @@
 package com.mwanzias.lending.loanproduct.controller;
 
 import com.mwanzias.lending.loanproduct.entity.LoanProduct;
-import com.mwanzias.lending.loanproduct.repository.LoanProductRepository;
+import com.mwanzias.lending.loanproduct.service.LoanProductService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,17 +13,26 @@ import java.util.List;
 @RestController
 public class LoanProductController {
 
-    // adding observeability for the application in order to be able to troubleshoot
+    // adding observeability for the application in order to be able to troubleshoot- this
+    // will be used after finalising the logging infrastrature
     private static final Logger logger = LoggerFactory.getLogger(LoanProductController.class);
 
+    @Autowired
+    private LoanProductService loanProductService;
+
    @PostMapping("/loanproducts")
-   public ResponseEntity<LoanProduct> create(@RequestBody LoanProduct loanProduct) {
-    return null;
+   public LoanProduct saveLoanProduct(@RequestBody LoanProduct loanProduct) {
+    return loanProductService.saveLoanProduct(loanProduct);
    }
 
-    @GetMapping("/{id}")
+    @GetMapping("/loanproducts")
+    public List<LoanProduct> getLoanProducts() {
+        return loanProductService.getAllLoanProducts();
+    }
+
+    @GetMapping("/loanproducts/{id}")
     public LoanProduct findById(@PathVariable  Long id) {
-        return null;
+        return loanProductService.getAllLoanProductById(id);
     }
 
 }
