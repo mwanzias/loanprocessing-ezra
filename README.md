@@ -69,7 +69,7 @@ in order for the service to be able to locate the discover server.
 
 ## Communicating to API
 The following are the APIS that have so far been completed 
-1. creating a KYC record we can invoke this using postman, insomnia, curl 
+1. creating a KYC record we can invoke this using postman, insomnia, curl as depicted in the below screenshot 
  
 ![img.png](img.png)
 
