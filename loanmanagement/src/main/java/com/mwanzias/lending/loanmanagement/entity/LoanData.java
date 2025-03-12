@@ -5,11 +5,9 @@ import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cglib.core.Local;
 
 import java.time.LocalDateTime;
-import java.util.Date;
+
 
 @Entity
 public class LoanData {
